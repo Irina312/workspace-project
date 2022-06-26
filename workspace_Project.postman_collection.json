@@ -492,7 +492,7 @@
 			"response": []
 		},
 		{
-			"name": "Deiete-Test",
+			"name": "Delete-Test",
 			"event": [
 				{
 					"listen": "test",
