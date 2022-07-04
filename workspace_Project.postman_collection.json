@@ -8,6 +8,21 @@
 	"item": [
 		{
 			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Create a variable to save the token\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"// Save a value in an Environment Variable\r",
+							"postman.setEnvironmentVariable(\"token\", jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -283,8 +298,7 @@
 					},
 					{
 						"key": "authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJvY3RvcGVyZiIsImlkIjoiWnBLV3hYMEJ0THhSNEJnZUFPTnQiLCJleHAiOjE2NTYyNTY4MDUsImlhdCI6MTY1NjE3MDQwNSwiaGFzaCI6IjkxNmNmNzZiOGNlODdlMTJjNmZkYTAwZWU4NjAyYjkwIn0.UCb6n7eSGAytWe3HhmNWNthmbRBo0oYQK7QHNVfHDic",
-						"disabled": true
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJvY3RvcGVyZiIsImlkIjoiWnBLV3hYMEJ0THhSNEJnZUFPTnQiLCJleHAiOjE2NTYyNTY4MDUsImlhdCI6MTY1NjE3MDQwNSwiaGFzaCI6IjkxNmNmNzZiOGNlODdlMTJjNmZkYTAwZWU4NjAyYjkwIn0.UCb6n7eSGAytWe3HhmNWNthmbRBo0oYQK7QHNVfHDic"
 					},
 					{
 						"key": "content-type",
